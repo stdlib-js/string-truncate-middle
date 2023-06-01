@@ -34,25 +34,107 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-truncate-middle
+```
 
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
+
+<section class="usage">
+
+## Usage
+
+```javascript
+var truncateMiddle = require( '@stdlib/string-truncate-middle' );
+```
+
+#### truncate( str, len\[, seq] )
+
+Truncates a string in the middle to a specified length.
+
+```javascript
+var out = truncateMiddle( 'beep boop', 7 );
+// returns 'be...op'
+```
+
+By default, the truncated string uses the replacement sequence `'...'`. To customize the replacement sequence, provide a `seq` argument:
+
+```javascript
+var out = truncateMiddle( 'beep boop', 7, '!' );
+// returns 'bee!oop'
+
+out = truncateMiddle( 'beep boop', 7, '!!!' );
+// returns 'be!!!op'
+```
+
+</section>
+
+<!-- /.usage -->
 
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
+<section class="notes">
 
+</section>
+
+<!-- /.notes -->
 
 <!-- Package usage examples. -->
 
+<section class="examples">
 
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var truncateMiddle = require( '@stdlib/string-truncate-middle' );
+
+var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+var out = truncateMiddle( str, 15 );
+// returns 'Lorem ... elit.'
+
+str = 'To be or not to be, that is the question';
+out = truncateMiddle( str, 19, '|' );
+// returns 'To be or | question'
+
+str = 'The quick fox jumps over the lazy dog.';
+out = truncateMiddle( str, 28, '...' );
+// returns 'The quick fox...he lazy dog.'
+
+str = '🐺 Wolf Brothers 🐺';
+out = truncateMiddle( str, 7 );
+// returns '🐺 ... 🐺'
+
+str = '🐺 Wolf Pack 🐺';
+out = truncateMiddle( str, 7, '🐺🐺🐺' );
+// returns '🐺 🐺🐺🐺 🐺'
+```
+
+</section>
+
+<!-- /.examples -->
 
 <!-- Section for describing a command-line interface. -->
 
-
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -70,7 +152,7 @@ npm install -g @stdlib/string-truncate-middle-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: truncate-middle [options] [<string>] --len <length>
@@ -92,7 +174,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -114,7 +196,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ truncate-middle 'Hello, World!' --len 8
@@ -159,9 +241,10 @@ Bee|op
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/string-truncate-middle`][@stdlib/string-truncate-middle]</span><span class="delimiter">: </span><span class="description">truncate a string in the middle to a specified length.</span>
 -   <span class="package-name">[`@stdlib/string-truncate`][@stdlib/string/truncate]</span><span class="delimiter">: </span><span class="description">truncate a string to a specified length.</span>
 
 </section>
@@ -181,7 +264,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -204,8 +287,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-truncate-middle-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-truncate-middle-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-truncate-middle.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-truncate-middle
 
 [test-image]: https://github.com/stdlib-js/string-truncate-middle/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/string-truncate-middle/actions/workflows/test.yml?query=branch:main
