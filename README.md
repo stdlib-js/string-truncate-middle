@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@deno/mod.js';
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.1.0-deno/mod.js';
 ```
 
 #### truncate( str, len\[, seq] )
@@ -95,7 +95,7 @@ out = truncateMiddle( 'beep boop', 7, '!!!' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@deno/mod.js';
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.1.0-deno/mod.js';
 
 var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 var out = truncateMiddle( str, 15 );
