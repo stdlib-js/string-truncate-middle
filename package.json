@@ -45,7 +45,7 @@
     "@stdlib/assert-is-string": "^0.1.1",
     "@stdlib/cli-ctor": "^0.1.1",
     "@stdlib/fs-read-file": "^0.1.1",
-    "@stdlib/math-base-special-floor": "^0.1.0",
+    "@stdlib/math-base-special-floor": "^0.1.1",
     "@stdlib/math-base-special-round": "^0.1.1",
     "@stdlib/process-read-stdin": "^0.1.1",
     "@stdlib/regexp-eol": "^0.1.1",
