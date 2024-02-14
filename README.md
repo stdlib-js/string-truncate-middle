@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-truncate-middle/tags). For example,
+
+```javascript
 import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.2.0-deno/mod.js';
 ```
 
@@ -95,7 +100,7 @@ out = truncateMiddle( 'beep boop', 7, '!!!' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.2.0-deno/mod.js';
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@deno/mod.js';
 
 var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 var out = truncateMiddle( str, 15 );
