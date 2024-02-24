@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@esm/index.mjs';
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.2.1-esm/index.mjs';
 ```
 
 #### truncate( str, len\[, seq] )
@@ -100,7 +100,7 @@ out = truncateMiddle( 'beep boop', 7, '!!!' );
 <body>
 <script type="module">
 
-import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@esm/index.mjs';
+import truncateMiddle from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-truncate-middle@v0.2.1-esm/index.mjs';
 
 var str = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 var out = truncateMiddle( str, 15 );
